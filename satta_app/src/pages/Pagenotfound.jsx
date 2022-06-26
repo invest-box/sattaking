@@ -9,7 +9,7 @@ function Pagenotfound(props) {
 
   useEffect(()=>{
     setwinHeight(window.innerHeight)
-  })
+  },[])
   
 function goback(){
   history('/')
