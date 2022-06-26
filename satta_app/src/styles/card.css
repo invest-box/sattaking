@@ -1,0 +1,48 @@
+
+.cardMainDiv{
+    display: flex;
+    position: relative;
+    width: 40%;
+    flex-flow: column;
+    margin-top: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    /* border: 2px solid black; */
+    background-color: #3a50f9;
+    border-radius: 15px;
+    color: antiquewhite;
+    /* box-shadow: 1px 1px 10px black; */
+}
+.cardHead{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.cardBottom{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+
+}
+.cardInput{
+    width: 40%;
+}
+
+.cardDate{
+    width: 40%;
+    /* margin-top: 1rem; */
+}
+.cardMainDiv button{
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bolder;
+    color: #3a50f9;
+    border: none;
+    box-shadow: 0 0 5px whitesmoke;
+}

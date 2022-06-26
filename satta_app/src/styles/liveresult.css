@@ -1,0 +1,58 @@
+.mainLiveResult{
+    display: inline-block;
+    /* border: 2px solid black; */
+    margin-top: 7rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+.showResult{
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    width: 50%;
+    margin: auto;
+    background-color: #3a50f9;
+    border-radius: 1rem;
+}
+
+.resultIcon{
+    height: 6rem;
+    width: 6rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    /* background-color: aliceblue; */
+    margin: -3rem auto;
+    background-image: url('.././images/moneylogo.jpg');
+    background-size: cover;
+   
+}
+.resultHeading{
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    width: 100%;
+   
+    margin-top: 1rem;
+    
+}
+
+.heading_result{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading_result h3{
+color: rgb(249, 249, 252);
+}
+
+.table_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    z-index: -2;
+   
+}
