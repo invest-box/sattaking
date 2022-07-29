@@ -8,4 +8,4 @@ mongoose.connect("mongodb+srv://admin:admin@clustersatta.duvpv.mongodb.net/?retr
     console.log("connection succssful")
 }).catch((e)=>{
     console.log(e)
-})
+})hello
