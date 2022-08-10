@@ -3,14 +3,39 @@ import { AgGridReact, AgGridColumn } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css'; // Core grid CSS, always needed
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css'; // Optional theme CSS
 import links from '../../links';
+
+import Loader from '../../images/jelly-fluid-loader.gif';
 import '../../styles/table.css';
-import Loader from '../../images/jelly-fluid-loader.gif'
 function Tableresult(props) {
   const [data, setData] = useState();
+  const [width, setwidth] = useState('');
+  const [avail_width, setavail_width] = useState('');
 
   useEffect(() => {
     getData();
+  
   }, []);
+  useEffect(() => {
+   
+    tableWidth()
+  });
+  
+  
+  const tableWidth=()=>{
+    setavail_width(window.innerWidth)
+   console.log(window.innerWidth)
+  if(window.innerWidth<=575){
+    setwidth(100)
+  }else if(window.innerWidth>575 && window.innerWidth<768){
+    setwidth(110)
+  }else if(window.innerWidth>769 && window.innerWidth<991){
+    setwidth(130)
+  }else if(window.innerWidth>992 && window.innerWidth<1120){
+    setwidth(150)
+  }else{
+    setwidth('')
+  }
+  }
 
   const getData = async () => {
     await fetch(links.mainDataLink)
@@ -29,7 +54,7 @@ function Tableresult(props) {
         
           <div
             className='ag-theme-alpine'
-            style={{  width: '75%', zIndex: 0 }}
+            style={{  width: '100%', zIndex: 0 }}
           >
             <AgGridReact rowData={data} domLayout='autoHeight'
             overlayLoadingTemplate={
@@ -38,7 +63,7 @@ function Tableresult(props) {
             >
               <AgGridColumn
                 headerName='Date'
-                
+                width={width}               
                 cellRenderer={(data) => {
                   // console.log(data.data.date);
 
@@ -47,14 +72,19 @@ function Tableresult(props) {
               />
               <AgGridColumn
                 headerName='disawar'
+                width={width}
+                headerClass="disawar_header"
+                cellStyle={{width:"100px"}}
                 cellRenderer={(data) => {
                   // console.log(data.data.data.disawar);
 
-                  return <>{data.data.data.disawar}</>;
+                  return < >{data.data.data.disawar}</>;
                 }}
               />
               <AgGridColumn
                 headerName='faridabad'
+                width={width}
+
                 cellRenderer={(data) => {
                   // console.log(data.data.data.faridabad);
 
@@ -63,6 +93,7 @@ function Tableresult(props) {
               />
               <AgGridColumn
                 headerName='ghaziabad'
+                width={width}
                 cellRenderer={(data) => {
                   // console.log(data.data.data);
 
@@ -71,6 +102,7 @@ function Tableresult(props) {
               />
               <AgGridColumn
                 headerName='ghazipur_bazar'
+                width={width}
                 cellRenderer={(data) => {
                   // console.log(data.data.data.ghazipur_bazar);
 
@@ -79,6 +111,8 @@ function Tableresult(props) {
               />
               <AgGridColumn
                 headerName='gali'
+                width={width}
+
                 cellRenderer={(data) => {
                   // console.log(data.data.data.gali);
 

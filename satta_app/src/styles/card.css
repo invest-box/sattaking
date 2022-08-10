@@ -4,7 +4,7 @@
     position: relative;
     width: 40%;
     flex-flow: column;
-    margin-top: 2rem;
+    margin-top: 4rem;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem;
@@ -12,6 +12,7 @@
     background-color: #3a50f9;
     border-radius: 15px;
     color: antiquewhite;
+    margin-bottom: 5rem;
     /* box-shadow: 1px 1px 10px black; */
 }
 .cardHead{
@@ -46,3 +47,13 @@
     border: none;
     box-shadow: 0 0 5px whitesmoke;
 }
+
+@media  (max-width: 1100px) { 
+    .cardMainDiv{
+        width: 70%;     
+    border: none;
+        
+    }
+   
+ }
+
