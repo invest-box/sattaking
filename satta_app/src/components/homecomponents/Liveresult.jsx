@@ -8,34 +8,38 @@ function Liveresult(props) {
         <div className='showResult'>
 
           <div className='resultIcon'> </div>
+          <div className="resutresponsive">
           <div className="resultHeading">
-            <div className="heading_result">
-              <h3> Disawar -:</h3>
-              <h3>xx</h3>
-            </div>
-            <div className="heading_result">
-              <h3> Faridabad -:</h3>
-              <h3>xx</h3>
-            </div>
-          </div>
+           
+           <div className="heading_result">
+             <p> Disawar -: <span>xx</span></p>
+            
+           </div>
+           <div className="heading_result">
+             <p> Faridabad -: <span>xx</span></p>
+            
+           </div>
+         </div>
 
-          <div className="resultHeading">
-            <div className="heading_result">
-              <h3> Ghaziabad -:</h3>
-              <h3>xx</h3>
-            </div>
-            <div className="heading_result">
-              <h3> Ghazipur_bazar -:</h3>
-              <h3>xx</h3>
-            </div>
-          </div>
+         <div className="resultHeading">
+           <div className="heading_result">
+             <p> Ghaziabad -: <span>xx</span></p>
+             {/* */}
+           </div>
+           <div className="heading_result">
+             <p> Ghazipur_bazar -: <span>xx</span></p>
+            
+           </div>
+         </div>
 
-          <div className="resultHeading">
-            <div className="heading_result">
-              <h3> Gali -:</h3>
-              <h3>xx</h3>
-            </div>
-          </div>
+         <div className="resultHeading">
+           <div className="heading_result">
+             <p> Gali -: <span>xx</span></p>
+            
+           </div>
+         </div>
+              </div>
+        
         </div>
       </div>
     </div>

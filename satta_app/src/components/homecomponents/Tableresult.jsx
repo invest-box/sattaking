@@ -13,28 +13,28 @@ function Tableresult(props) {
 
   useEffect(() => {
     getData();
-  
+
   }, []);
   useEffect(() => {
-   
+
     tableWidth()
   });
-  
-  
-  const tableWidth=()=>{
+
+
+  const tableWidth = () => {
     setavail_width(window.innerWidth)
-   console.log(window.innerWidth)
-  if(window.innerWidth<=575){
-    setwidth(100)
-  }else if(window.innerWidth>575 && window.innerWidth<768){
-    setwidth(110)
-  }else if(window.innerWidth>769 && window.innerWidth<991){
-    setwidth(130)
-  }else if(window.innerWidth>992 && window.innerWidth<1120){
-    setwidth(150)
-  }else{
-    setwidth('')
-  }
+    console.log(window.innerWidth)
+    if (window.innerWidth <= 575) {
+      setwidth(100)
+    } else if (window.innerWidth > 575 && window.innerWidth < 768) {
+      setwidth(110)
+    } else if (window.innerWidth > 769 && window.innerWidth < 991) {
+      setwidth(130)
+    } else if (window.innerWidth > 992 && window.innerWidth <= 1120) {
+      setwidth(150)
+    } else {
+      setwidth(250)
+    }
   }
 
   const getData = async () => {
@@ -51,84 +51,90 @@ function Tableresult(props) {
     <div className='table_div'>
       {data ? (
         <>
-        
+
           <div
             className='ag-theme-alpine'
-            style={{  width: '100%', zIndex: 0 }}
+            style={{ width: '100%', zIndex: 0 }}
           >
             <AgGridReact rowData={data} domLayout='autoHeight'
-            overlayLoadingTemplate={
-              '<span className="ag-overlay-loading-center">Please wait while your rows are loading...</span>'
-            }
+              overlayLoadingTemplate={
+                '<span className="ag-overlay-loading-center">Please wait while your rows are loading...</span>'
+              }
             >
               <AgGridColumn
                 headerName='Date'
-                width={width}               
+                width={width}
+                headerClass="disawar_header"
+                // cellStyle={{ width: "100px" }}
                 cellRenderer={(data) => {
                   // console.log(data.data.date);
 
-                  return <>{data.data.date}</>;
+                  return <p className='tableValue'>{data.data.date}</p>;
                 }}
               />
               <AgGridColumn
                 headerName='disawar'
                 width={width}
                 headerClass="disawar_header"
-                cellStyle={{width:"100px"}}
+                // cellStyle={{ width: "100px" }}
                 cellRenderer={(data) => {
                   // console.log(data.data.data.disawar);
 
-                  return < >{data.data.data.disawar}</>;
+                  return <p className='tableValue'>{data.data.data.disawar}</p>;
                 }}
               />
               <AgGridColumn
                 headerName='faridabad'
                 width={width}
+                headerClass="disawar_header"
 
                 cellRenderer={(data) => {
                   // console.log(data.data.data.faridabad);
 
-                  return <>{data.data.data.faridabad}</>;
+                  return <p className='tableValue'>{data.data.data.faridabad}</p>;
                 }}
               />
               <AgGridColumn
                 headerName='ghaziabad'
+                headerClass="disawar_header"
                 width={width}
                 cellRenderer={(data) => {
                   // console.log(data.data.data);
 
-                  return <>{data.data.data.ghaziabad}</>;
+                  return <p className='tableValue'>{data.data.data.ghaziabad}</p>;
                 }}
               />
               <AgGridColumn
                 headerName='ghazipur_bazar'
                 width={width}
+                headerClass="disawar_header"
                 cellRenderer={(data) => {
                   // console.log(data.data.data.ghazipur_bazar);
 
-                  return <>{data.data.data.ghazipur_bazar}</>;
+                  return <p className='tableValue'>{data.data.data.ghazipur_bazar}</p>;
                 }}
               />
               <AgGridColumn
                 headerName='gali'
                 width={width}
+                headerClass="disawar_header"
 
                 cellRenderer={(data) => {
                   // console.log(data.data.data.gali);
 
-                  return <>{data.data.data.gali}</>;
+                  return <p className='tableValue'>{data.data.data.gali}</p>;
                 }}
               />
             </AgGridReact>
           </div>
         </>
       ) : (
-       <>
-       <div className='table_div1'>
-       <img src={Loader} height='200px' width='200px' alt=''/>
-       <h1>...please wait</h1>
-       </div>
-       </>
+        <>
+          <div className='table_div1'>
+            <img src={Loader} height='200px' width='200px' alt='' />
+            <h1>...please wait</h1>
+          </div>
+        </>
       )}
     </div>
   );

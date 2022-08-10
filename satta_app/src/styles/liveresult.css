@@ -1,6 +1,4 @@
 .mainLiveResult{
-    display: inline-block;
-    /* border: 2px solid black; */
     margin-top: 10rem;
     width: 100%;
     text-align: center;
@@ -9,7 +7,7 @@
 }
 .showResult{
     border: 1px solid rgba(0, 0, 0, 0.164);
-    width: 50%;
+    width: 70%;
     margin: auto;
     background-color: #3a50f9;
     border-radius: 1rem;
@@ -28,60 +26,83 @@
 }
 .resultHeading{
     display: flex;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     width: 100%;
-   
-    margin-top: 1rem;
-    
+    color: rgb(249, 249, 252);
+    font-size: 40px;
 }
 
 .heading_result{
-    display: flex;
+    /* display: flex; */
     width: 50%;
     align-items: center;
     justify-content: center;
 }
 
-.heading_result h3{
-color: rgb(249, 249, 252);
-}
+
 
 
  /* Extra small devices (portrait phones, less than 576px) */
+ @media(min-width: 300px)  and (max-width: 568px) { 
+    
+        .resultIcon{
+            height: 10rem;
+            width: 10rem;
+            margin-top: -5rem;
+            margin-left: auto;
 
-@media (max-width: 575.98px) { 
-    .showResult{       
-        width: 90%;      
-    };
-
+        }
+        .showResult{       
+            width:95%;  
+            
+        }
+    
+        .resultHeading{
+           flex-flow: column;
+            }
+            .resutresponsive{
+                margin-top: 4rem;
+               
+            }
+            .heading_result{
+                width: 100%;
+                font-size: 35px;
+                font-weight: bolder;
+            }
     
  }
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) { 
-    .showResult{       
-        width: 90%;      
-    };
-    .resultHeading{
-        padding-left: 2rem;    
-        
+@media (min-width: 569px) and (max-width: 1199.98px) { 
+    .resutresponsive{
+        margin-top: 3rem;
+       
     }
- }
-
-/* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
     .showResult{       
         width: 90%;      
-    };
+    }
+    .heading_result{
+        width: 100%;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+
  }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .showResult{       
-        width: 75%;      
-    };
- }
+
 
 /* // Extra large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1200px) { ... } */
+@media (min-width: 1200px) { 
+    .resutresponsive{
+        margin-top: 3rem;
+       
+    }
+    .showResult{       
+        width: 90%;      
+    }
+    .heading_result{
+        width: 100%;
+        font-size: 50px;
+        font-weight: bolder;
+    }
+
+ }
