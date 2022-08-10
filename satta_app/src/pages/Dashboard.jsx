@@ -1,5 +1,6 @@
 import React from 'react';
-import Card from '../components/dashboard/Card';
+// import Card from '../components/dashboard/Card';
+import Card from '../components/dashboard/Card1';
 import Navbar from '../components/homecomponents/Navbar';
 import Navcontact from '../components/homecomponents/Navcontact';
 
@@ -11,11 +12,13 @@ function Dashboard(props) {
             <Navcontact/>
             <Navbar/>
          <div className='dashboardMainDiv'>
-           <Card name="disawar" />
+           {/* <Card name="disawar" />
            <Card name="faridabad" />
            <Card name="ghaziabad" />
            <Card name="ghazipur_bazar" />
-           <Card name="gali" />
+           <Card name="gali" /> */}
+
+           <Card />
            </div>
            <Footer/>
         </div>

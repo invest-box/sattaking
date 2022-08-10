@@ -9,7 +9,7 @@ module.exports = async (req, res, next) => {
     }
    var secret ="secret_this_should_be_longer"
    const decodedToken = jwt.verify(token,secret);
-  
+ 
   req.userData = {
            email: decodedToken.email,
           //  userId: decodedToken.userId 
@@ -17,5 +17,6 @@ module.exports = async (req, res, next) => {
   next();
     } catch (error) {
       res.status(401).json({status:401, message: error });
+     
     }
   };

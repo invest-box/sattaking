@@ -6,6 +6,7 @@ const root = require('path').join(__dirname, '..', 'satta_app', 'build');
 
 const getmaindata_route = require('./routes/getmaindata');
 const faridabad_route = require('./routes/faridabad');
+const alldata_route = require('./routes/alldata');
 const disawar_route = require('./routes/disawar');
 const gali_route = require('./routes/gali');
 const gajiyabad_route = require('./routes/gajiyabad');
@@ -29,11 +30,12 @@ app.use(userlogin_route);
 app.use(userdata_route);
 app.use(getmaindata_route);
 app.use(faridabad_route);
+
 app.use(disawar_route);
 app.use(gali_route);
 app.use(gajiyabad_route);
 app.use(gajipurbazar_route);
-
+app.use(alldata_route);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(root));
   app.get('*', (req, res) => {

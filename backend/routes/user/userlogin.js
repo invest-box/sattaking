@@ -13,13 +13,12 @@ const userlogin_route = app.post('/userlogin', async (req, res) => {
       const token = jwt.sign(
         { email: user.email, userId: user._id },
         "secret_this_should_be_longer",
-        { expiresIn: "1h" }
+        { expiresIn: "1d" }
       );
 
       res.status(200).json({
         token: token,
-        expiresIn: 3600,
-        userId: user
+        expiresIn: '1 day'
       });
     } else {
       res.status(403).send('invalid credential')

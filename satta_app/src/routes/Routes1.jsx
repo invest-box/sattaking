@@ -29,10 +29,10 @@ function Routes1(props) {
       .then((data) => {
         // console.log(data.status);
 
-        if (data.status === 401) {
-          setAuthenticate(false);
-        } else {
+        if (data.status === 200) {
           setAuthenticate(true);
+        } else {
+          setAuthenticate(false);
         }
       })
       .catch((err) => {
