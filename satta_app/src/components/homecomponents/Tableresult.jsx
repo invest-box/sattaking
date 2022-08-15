@@ -23,7 +23,6 @@ function Tableresult(props) {
 
   const tableWidth = () => {
     setavail_width(window.innerWidth)
-    console.log(window.innerWidth)
     if (window.innerWidth <= 575) {
       setwidth(100)
     } else if (window.innerWidth > 575 && window.innerWidth < 768) {
@@ -65,18 +64,20 @@ function Tableresult(props) {
                 headerName='Date'
                 width={width}
                 headerClass="disawar_header"
-                // cellStyle={{ width: "100px" }}
+                
                 cellRenderer={(data) => {
-                  // console.log(data.data.date);
-
-                  return <p className='tableValue'>{data.data.date}</p>;
+                 var day = data.data.date.day
+                 var month = data.data.date.month
+                 var year = data.data.date.year
+                
+                  return <p className='tableValue'>{day}/{month}/{year}</p>;
                 }}
               />
               <AgGridColumn
                 headerName='disawar'
                 width={width}
                 headerClass="disawar_header"
-                // cellStyle={{ width: "100px" }}
+                
                 cellRenderer={(data) => {
                   // console.log(data.data.data.disawar);
 

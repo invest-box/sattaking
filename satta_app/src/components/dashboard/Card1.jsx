@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import links from '../../links';
 import '../../styles/card.css'
 function Card1(props) {
-    const [date, setDate] = useState();
+    const [date1, setDate1] = useState();
     const [disawar, setdisawar] = useState('');
     const [faridabad, setfaridabad] = useState('');
     const [ghaziabad, setghaziabad] = useState('');
@@ -18,10 +18,9 @@ function Card1(props) {
     }, [])
 
     function dateInput(e) {
-
-        var localdate = e.target.value.split('-').reverse().join('-')
-
-        setDate(localdate)
+       
+        var localdate = e.target.value
+        setDate1(localdate)
     }
 
     function disawarInput(e) {
@@ -45,7 +44,7 @@ function Card1(props) {
 
     }
     function submitForm() {
-        if (!date) {
+        if (!date1) {
             alert("pleasse enter date")
         } else if (!disawar) {
             alert("pleasse enter date")
@@ -65,8 +64,13 @@ function Card1(props) {
         }
 
         var data = {gali,disawar,ghaziabad,faridabad,ghazipur_bazar }
-        
-     if(data){
+
+        var date = {
+            day:parseInt(date1.split('-')[2]),
+            month:parseInt(date1.split('-')[1]),
+            year:parseInt(date1.split('-')[0])
+        }
+     if(data && date){
         fetch(`${links.allDataLink}`, {
             method: "post",
             headers: {

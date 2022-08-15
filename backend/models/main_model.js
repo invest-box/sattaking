@@ -2,8 +2,18 @@ const mongoose = require('mongoose');
 
 const mainSchema = new mongoose.Schema({
     date: {
-        type: String,
+       day:{
+        type: Number,
         required: true
+       },
+       month:{
+        type: Number,
+        required: true
+       },
+       year:{
+        type: Number,
+        required: true
+       }
     },
     data:{
         gali:{
