@@ -9,7 +9,7 @@ const mainGetData_route = app.get('/getmaindata', async (req, res) => {
        return main;
     }
     var allData = await getData();
-    console.log(allData)
+    // console.log(allData)
     if (allData) {
         res.status(200).send(allData)
     } else {

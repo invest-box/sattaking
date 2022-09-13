@@ -8,7 +8,7 @@ function Card(props) {
     const [name, setName] = useState('');
 
     useEffect(() => {
-        var token = window.localStorage.getItem('token');
+        let token = window.localStorage.getItem('token');
         if (token) {
             setAuth(token)
         }
@@ -16,9 +16,12 @@ function Card(props) {
 
 
     function dateInput(e) {
-        
-        var localdate =e.target.value.split('-').reverse().join('-')
-        setDate(localdate)
+        let date = {
+            day:parseInt(e.target.value.split('-')[2]),
+            month:parseInt(e.target.value.split('-')[1]),
+            year:parseInt(e.target.value.split('-')[0])
+        }
+        setDate(date)
     }
     function valueInput(e) {
        

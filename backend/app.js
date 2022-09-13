@@ -5,6 +5,7 @@ const path = require('path');
 const root = require('path').join(__dirname, '..', 'satta_app', 'build');
 
 const getmaindata_route = require('./routes/getmaindata');
+const getmainlivedata_route = require('./routes/liveresult');
 const faridabad_route = require('./routes/faridabad');
 const alldata_route = require('./routes/alldata');
 const disawar_route = require('./routes/disawar');
@@ -29,6 +30,7 @@ app.use(usersignup_route);
 app.use(userlogin_route);
 app.use(userdata_route);
 app.use(getmaindata_route);
+app.use(getmainlivedata_route);
 app.use(faridabad_route);
 
 app.use(disawar_route);
