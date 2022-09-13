@@ -7,15 +7,16 @@ const [Data,setData]=useState()
   useEffect(()=>{
     getLiveData();
   },[])
-  console.log(links)
+  // console.log(links)
   const getLiveData = () => {
     let liveDate = new Date();
-    console.log(liveDate)
+   
     let date = {
-      day: new Date().getUTCDate(),
+      day: new Date().getDate(),
       month: new Date().getUTCMonth()+1,
-      year: new Date().getUTCFullYear()
+      year: new Date().getFullYear()
     }
+    console.log('livedate',date)
     fetch(`${links.getLiveDataLink}`, {
       method: "post",
       headers: {

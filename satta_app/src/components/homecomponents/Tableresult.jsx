@@ -95,7 +95,7 @@ function Tableresult(props) {
                 
                 cellRenderer={(data) => {
                  
-                console.log(findEquall(data.data.data.disawar))
+                // console.log(findEquall(data.data.data.disawar))
                 
                   if(data.data.data.disawar==0){
                     return <p className='tableValue1'>XX</p>;
