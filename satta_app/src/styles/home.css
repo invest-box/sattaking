@@ -1,0 +1,24 @@
+.imageDiv{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    margin-bottom: 30px;
+   
+}
+.notice,.logopdf{
+    width:40%;
+    height:700px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 30px black;
+}
+
+@media(min-width: 300px)  and (max-width: 568px) { 
+    .imageDiv{
+        flex-direction: column;
+        justify-content:center;             
+    }
+    .notice,.logopdf{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,33 @@
+.mainenterDate{
+    display: flex;
+    flex-flow: column;
+    padding: 30px;
+    align-items: center;
+    /* border: 2px solid black; */
+    margin-top: 100px;
+    background-color: #3a50f9;
+    margin-bottom: 20px;
+}
+
+.enterDate{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+   /* border: 2px solid black;  */
+}
+.enterDate label{
+    color: aliceblue;
+    font-size: large;
+    font-weight: bold;
+}
+.mainenterDate button{
+    margin-top: 20px;
+    width: 20%;
+    background-color: red;
+    color: aliceblue;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid yellow;
+}

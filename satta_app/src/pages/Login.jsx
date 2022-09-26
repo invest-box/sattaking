@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import {useNavigate} from "react-router-dom"
+// import {useNavigate} from "react-router-dom"
 import links from '../links';
 import Navbar from '../components/homecomponents/Navbar';
 import Navcontact from '../components/homecomponents/Navcontact';
@@ -13,7 +13,7 @@ import '../styles/login.css'
  function Login(props) {
     const [name, setName] = useState()
     const [password, setPassword] = useState()
-var navigate = useNavigate()
+// var navigate = useNavigate()
 // console.log(links.loginLink)
   const userLogin =  () => {
         

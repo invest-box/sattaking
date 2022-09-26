@@ -6,6 +6,7 @@ var localLinks = {
   mainDataLink: '/getmaindata',
   allDataLink:'/alldata',
   getLiveDataLink: '/getlivedata',
+  databydate: '/databydate',
 
 };
 
@@ -17,6 +18,7 @@ var localLinks = {
 //   mainDataLink: 'http://localhost:8080/getmaindata',
 //   allDataLink: 'http://localhost:8080/alldata',
 //   getLiveDataLink: 'http://localhost:8080/getlivedata',
+//   databydate: 'http://localhost:8080/databydate',
 // };
 
 export default localLinks;

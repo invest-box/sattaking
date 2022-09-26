@@ -6,6 +6,7 @@ const root = require('path').join(__dirname, '..', 'satta_app', 'build');
 
 const getmaindata_route = require('./routes/getmaindata');
 const getmainlivedata_route = require('./routes/liveresult');
+const datebydate_route = require('./routes/databydate');
 const faridabad_route = require('./routes/faridabad');
 const alldata_route = require('./routes/alldata');
 const disawar_route = require('./routes/disawar');
@@ -21,11 +22,6 @@ require('dotenv').config();
 var port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cors());
-
-// app.get('/', (req, res) => {
-// res.send('Welcome to learn backend with express!')
-// });
-
 app.use(usersignup_route);
 app.use(userlogin_route);
 app.use(userdata_route);
@@ -38,6 +34,7 @@ app.use(gali_route);
 app.use(gajiyabad_route);
 app.use(gajipurbazar_route);
 app.use(alldata_route);
+app.use(datebydate_route);
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(root));
   app.get('*', (req, res) => {

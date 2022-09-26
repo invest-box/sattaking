@@ -6,7 +6,7 @@ function Navcontact(props) {
     return (
         <div className='navContactMain'>
             <WhatsAppIcon style={{fontSize:'14px',marginTop:'7px',marginRight:'5px'}}/>
-            <p style={{marginTop:"0px",paddingRight:'3rem'}}>contact no. -: XXXXXXXXX</p>
+            <p style={{marginTop:"0px",paddingRight:'3rem'}}>contact no. -: 9812568157</p>
         </div>
     );
 }

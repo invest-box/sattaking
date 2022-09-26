@@ -11,6 +11,11 @@ function Navbar(props) {
                 })}>
                     Home
                 </NavLink></li>
+                <li><NavLink className='link' to="/finddatabydate" style={({ isActive }) => ({
+                    color: isActive ? 'blue' : 'white'
+                })}>
+                    Find Data
+                </NavLink></li>
                 <li><NavLink className='link' to="/dashboard" style={({ isActive }) => ({
                     color: isActive ? 'blue' : 'white'
                 })}>
